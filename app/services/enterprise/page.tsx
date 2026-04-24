@@ -8,17 +8,17 @@ const helpCards: Array<{ icon: GlyphKind; title: string; body: string }> = [
   {
     icon: "search",
     title: "Workflow assessment",
-    body: "Analyze a high-friction area in marketing or content operations and identify the right intervention.",
+    body: "Analyze a high-friction area in operations, content, service delivery, or internal workflows and identify the right intervention.",
   },
   {
     icon: "document",
-    title: "Content operations implementation",
-    body: "Improve briefing, review, publishing, QA, and approval workflows inside your current environment.",
+    title: "Implementation inside your current stack",
+    body: "Improve workflows, review steps, approvals, QA, and handoffs without replacing the systems your teams already use.",
   },
   {
     icon: "layers",
-    title: "CMS and Martech workflow redesign",
-    body: "Rework content structures, metadata, handoffs, and orchestration across the tools you already use.",
+    title: "Workflow redesign and orchestration",
+    body: "Rework content structures, metadata, routing, and operational handoffs across the tools your teams already rely on.",
   },
   {
     icon: "chart",
@@ -68,28 +68,28 @@ const steps: Array<{ number: string; icon: GlyphKind; title: string; body: strin
 
 const useCases = [
   {
-    title: "Campaign briefing and asset intake",
-    body: "Reduce back-and-forth in planning, intake, and production kickoff across marketing teams.",
+    title: "Request intake and triage",
+    body: "Reduce back-and-forth in intake, routing, prioritization, and ownership across busy teams.",
   },
   {
-    title: "Content QA and compliance review",
-    body: "Improve brand, legal, and quality review workflows before content goes live.",
+    title: "Review and approval workflows",
+    body: "Improve quality, compliance, and approval steps before work moves forward.",
   },
   {
-    title: "CMS migration and structured content cleanup",
-    body: "Map, extract, normalize, and move content with stronger consistency and less manual effort.",
+    title: "Knowledge and documentation workflows",
+    body: "Organize, extract, and reuse internal knowledge so teams can act faster with less manual searching.",
   },
   {
-    title: "SEO remediation at scale",
-    body: "Identify, prioritize, and route technical and content fixes across large page inventories.",
+    title: "Content and data cleanup",
+    body: "Map, normalize, and restructure content or operational data with stronger consistency and less manual effort.",
   },
   {
-    title: "Experiment backlog generation",
-    body: "Create, organize, and evaluate testing ideas for CRO and digital growth teams.",
+    title: "QA and exception handling",
+    body: "Identify errors, edge cases, and operational exceptions earlier so teams spend less time on cleanup.",
   },
   {
-    title: "Campaign and channel reporting synthesis",
-    body: "Summarize performance across systems so teams can act faster without manual reporting churn.",
+    title: "Reporting and operational summaries",
+    body: "Summarize activity across systems so teams can act faster without manual reporting churn.",
   },
 ];
 
@@ -102,9 +102,9 @@ export default function EnterprisePage() {
           <h1>
             AI execution for
             <br />
-            modern marketing and
+            modern operations
             <br />
-            <span className="accent-text">content operations.</span>
+            <span className="accent-text">and digital teams.</span>
           </h1>
           <p>
             We assess one high-friction workflow, implement the right solution in your
@@ -116,7 +116,7 @@ export default function EnterprisePage() {
               <span className="arrow">↗</span>
             </Link>
             <Link href="#enterprise-use-cases" className="button button-secondary">
-              <span>See Martech use cases</span>
+              <span>See example use cases</span>
               <span className="arrow">↗</span>
             </Link>
           </div>
@@ -127,15 +127,15 @@ export default function EnterprisePage() {
           <div className="enterprise-hero-column enterprise-hero-column-left">
             <div className="enterprise-node">
               <div className="enterprise-node-icon"><Glyph kind="layers" /></div>
-              <span>CMS & DAM</span>
+              <span>Core systems</span>
             </div>
             <div className="enterprise-node">
               <div className="enterprise-node-icon"><Glyph kind="document" /></div>
-              <span>Content workflows</span>
+              <span>Team workflows</span>
             </div>
             <div className="enterprise-node">
               <div className="enterprise-node-icon"><Glyph kind="chart" /></div>
-              <span>Martech signals</span>
+              <span>Operational signals</span>
             </div>
           </div>
           <div className="enterprise-hero-core">
@@ -178,7 +178,6 @@ export default function EnterprisePage() {
               <span>Measurable impact</span>
             </div>
           </div>
-          <div className="enterprise-hero-foundation">Built around your existing systems, review steps, and operating constraints.</div>
         </div>
       </section>
 
@@ -236,7 +235,7 @@ export default function EnterprisePage() {
       </section>
 
       <section className="section section-enterprise-models" id="enterprise-use-cases">
-        <SectionHeader title="Example Martech use cases" />
+        <SectionHeader title="Example enterprise use cases" />
         <div className="help-grid">
           {useCases.map((item) => (
             <div key={item.title} className="help-card">

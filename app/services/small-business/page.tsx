@@ -100,14 +100,14 @@ export default function SmallBusinessPage() {
         <div className="hero-copy">
           <div className="eyebrow">Small business solutions</div>
           <h1>
-            Automate routine work,
+            Automate routine work and
             <br />
-            respond faster, and <span className="accent-text">free up</span>
+            <span className="accent-text">free up hours</span>
             <br />
-            hours every week.
+            every week.
           </h1>
           <p>
-            BZST helps small businesses streamline follow-up, reduce repetitive admin,
+            We help small businesses streamline follow-up, reduce repetitive admin,
             keep digital work moving, and make day-to-day operations easier to run.
           </p>
           <div className="button-row">
@@ -178,7 +178,6 @@ export default function SmallBusinessPage() {
               <span>More time back</span>
             </div>
           </div>
-          <div className="smb-hero-foundation">Built around the manual work, follow-up, and admin tasks that slow small teams down.</div>
         </div>
       </section>
 

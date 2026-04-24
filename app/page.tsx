@@ -82,7 +82,7 @@ export default function HomePage() {
             { title: "Higher efficiency", icon: "chart" },
             { title: "Stronger growth", icon: "rocket" },
           ]}
-          centerTitle="BZST"
+          centerTitle="AI"
           centerLabel="AI workflows"
           centerSubLabel="Plan. Automate. Improve."
         />
@@ -138,7 +138,7 @@ export default function HomePage() {
       </section>
 
       <section className="section section-home-why">
-        <SectionHeader title="Why BZST" />
+        <SectionHeader title="Why teams choose us" />
         <div className="pillars-band">
           {pillars.map((pillar) => (
             <div key={pillar.title} className="pillar-block">
