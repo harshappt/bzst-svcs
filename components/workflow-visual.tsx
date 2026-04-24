@@ -27,6 +27,7 @@ export function WorkflowVisual({
 }: WorkflowVisualProps) {
   const useCenterCard = variant !== "home";
   const useCompactNodes = variant === "home";
+  const showDecor = variant !== "home";
 
   return (
     <div className="hero-stage" aria-hidden="true">
@@ -122,11 +123,15 @@ export function WorkflowVisual({
           </div>
         ) : null}
       </div>
-      <div className="stone-plinth" />
-      <div className="decor-vase" />
-      <div className="leaf leaf-1" />
-      <div className="leaf leaf-2" />
-      <div className="leaf leaf-3" />
+      {showDecor ? (
+        <>
+          <div className="stone-plinth" />
+          <div className="decor-vase" />
+          <div className="leaf leaf-1" />
+          <div className="leaf leaf-2" />
+          <div className="leaf leaf-3" />
+        </>
+      ) : null}
     </div>
   );
 }
