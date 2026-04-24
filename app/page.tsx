@@ -69,18 +69,18 @@ export default function HomePage() {
           variant="home"
           animated
           inputs={[
-            { title: "Messages" },
-            { title: "Forms" },
-            { title: "Documents" },
-            { title: "CRM" },
-            { title: "Website" },
+            { title: "Messages", icon: "chat" },
+            { title: "Forms", icon: "admin" },
+            { title: "Documents", icon: "document" },
+            { title: "CRM", icon: "lead" },
+            { title: "Website", icon: "globe" },
           ]}
           outcomes={[
-            { title: "More qualified leads" },
-            { title: "Faster response" },
-            { title: "Better experiences" },
-            { title: "Higher efficiency" },
-            { title: "Stronger growth" },
+            { title: "More qualified leads", icon: "lead" },
+            { title: "Faster response", icon: "followup" },
+            { title: "Better experiences", icon: "spark" },
+            { title: "Higher efficiency", icon: "chart" },
+            { title: "Stronger growth", icon: "rocket" },
           ]}
           centerTitle="BZST"
           centerLabel="AI workflows"

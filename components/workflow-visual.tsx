@@ -1,10 +1,12 @@
+import { Glyph, type GlyphKind } from "@/components/glyph";
+
 type WorkflowVisualProps = {
   variant?: "home" | "small-business" | "enterprise";
   animated?: boolean;
   leftLabel?: string;
   rightLabel?: string;
-  inputs: Array<{ title: string; detail?: string }>;
-  outcomes: Array<{ title: string; detail?: string }>;
+  inputs: Array<{ title: string; detail?: string; icon?: GlyphKind }>;
+  outcomes: Array<{ title: string; detail?: string; icon?: GlyphKind }>;
   centerTitle: string;
   centerLabel?: string;
   centerSubLabel?: string;
@@ -24,6 +26,7 @@ export function WorkflowVisual({
   showFoundation,
 }: WorkflowVisualProps) {
   const useCenterCard = variant !== "home";
+  const useCompactNodes = variant === "home";
 
   return (
     <div className="hero-stage" aria-hidden="true">
@@ -33,16 +36,29 @@ export function WorkflowVisual({
           <span>{rightLabel}</span>
         </div>
         <div className="workflow-grid">
-          <div className="workflow-stack">
+          <div className={`workflow-stack ${useCompactNodes ? "workflow-stack-compact" : ""}`}>
             {inputs.map((item, index) => (
-              <div
-                key={item.title}
-                className="workflow-card"
-                style={animated ? { animationDelay: `${index * 120}ms` } : undefined}
-              >
-                <strong>{item.title}</strong>
-                {item.detail ? <span>{item.detail}</span> : null}
-              </div>
+              useCompactNodes ? (
+                <div
+                  key={item.title}
+                  className="workflow-chip"
+                  style={animated ? { animationDelay: `${index * 120}ms` } : undefined}
+                >
+                  <span className="workflow-chip-icon">
+                    <Glyph kind={item.icon ?? "spark"} />
+                  </span>
+                  <strong>{item.title}</strong>
+                </div>
+              ) : (
+                <div
+                  key={item.title}
+                  className="workflow-card"
+                  style={animated ? { animationDelay: `${index * 120}ms` } : undefined}
+                >
+                  <strong>{item.title}</strong>
+                  {item.detail ? <span>{item.detail}</span> : null}
+                </div>
+              )
             ))}
           </div>
           <div className="workflow-center">
@@ -70,16 +86,29 @@ export function WorkflowVisual({
             {!useCenterCard && centerLabel ? <div className="orb-caption">{centerLabel}</div> : null}
             {!useCenterCard && centerSubLabel ? <div className="orb-subcaption">{centerSubLabel}</div> : null}
           </div>
-          <div className="workflow-stack outcomes">
+          <div className={`workflow-stack outcomes ${useCompactNodes ? "workflow-stack-compact" : ""}`}>
             {outcomes.map((item, index) => (
-              <div
-                key={item.title}
-                className="workflow-card"
-                style={animated ? { animationDelay: `${index * 140 + 120}ms` } : undefined}
-              >
-                <strong>{item.title}</strong>
-                {item.detail ? <span>{item.detail}</span> : null}
-              </div>
+              useCompactNodes ? (
+                <div
+                  key={item.title}
+                  className="workflow-chip"
+                  style={animated ? { animationDelay: `${index * 140 + 120}ms` } : undefined}
+                >
+                  <span className="workflow-chip-icon">
+                    <Glyph kind={item.icon ?? "spark"} />
+                  </span>
+                  <strong>{item.title}</strong>
+                </div>
+              ) : (
+                <div
+                  key={item.title}
+                  className="workflow-card"
+                  style={animated ? { animationDelay: `${index * 140 + 120}ms` } : undefined}
+                >
+                  <strong>{item.title}</strong>
+                  {item.detail ? <span>{item.detail}</span> : null}
+                </div>
+              )
             ))}
           </div>
         </div>

@@ -167,11 +167,12 @@ button {
 }
 
 .hero-home-visual {
-  padding: 22px 0 2px;
+  padding: 6px 0 2px;
 }
 
 .hero-home-visual .hero-stage {
-  min-height: 560px;
+  min-height: 460px;
+  padding-top: 0;
 }
 
 .hero-home-visual .workflow-visual {
@@ -944,8 +945,8 @@ button {
 
 .workflow-visual-home {
   max-width: none;
-  padding: 42px 38px 44px;
-  border-radius: 34px;
+  padding: 28px 30px 32px;
+  border-radius: 30px;
   background:
     radial-gradient(circle at 50% 46%, rgba(220, 119, 70, 0.09), transparent 30%),
     linear-gradient(180deg, rgba(255, 254, 251, 0.98) 0%, rgba(249, 242, 234, 0.98) 100%);
@@ -994,13 +995,17 @@ button {
 .workflow-grid {
   display: grid;
   grid-template-columns: 1fr 1.05fr 1fr;
-  gap: 28px;
+  gap: 22px;
   align-items: center;
 }
 
 .workflow-stack {
   display: grid;
   gap: 18px;
+}
+
+.workflow-stack-compact {
+  gap: 14px;
 }
 
 .workflow-card,
@@ -1087,6 +1092,70 @@ button {
   font-size: 0.8rem;
 }
 
+.workflow-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 34px;
+  color: #2f261f;
+}
+
+.workflow-chip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 84px;
+  height: 1px;
+  transform: translateY(-50%);
+  background:
+    linear-gradient(90deg, rgba(220, 119, 70, 0.02), rgba(220, 119, 70, 0.24), rgba(220, 119, 70, 0.02)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(159, 142, 125, 0.18) 0 6px,
+      rgba(159, 142, 125, 0) 6px 12px
+    );
+  background-size: 200% 1px, 24px 1px;
+  animation: connector-flow 4.8s linear infinite;
+}
+
+.workflow-stack-compact .workflow-chip::after {
+  right: -98px;
+}
+
+.workflow-stack-compact.outcomes .workflow-chip {
+  justify-self: end;
+}
+
+.workflow-stack-compact.outcomes .workflow-chip::after {
+  left: -98px;
+  right: auto;
+  animation-direction: reverse;
+}
+
+.workflow-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+  opacity: 0.88;
+}
+
+.workflow-chip-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.workflow-chip strong {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 .workflow-center {
   position: relative;
   text-align: center;
@@ -1152,6 +1221,11 @@ button {
   will-change: transform;
 }
 
+.workflow-animated .workflow-chip {
+  animation: float-card 6.8s ease-in-out infinite;
+  will-change: transform;
+}
+
 .workflow-visual-home .workflow-stack:first-child .workflow-card:nth-child(odd) {
   animation-duration: 7.3s;
 }
@@ -1180,8 +1254,8 @@ button {
 
 .bzst-orb {
   position: relative;
-  width: 232px;
-  height: 232px;
+  width: 178px;
+  height: 178px;
   margin: 0 auto;
   border-radius: 50%;
   background:
@@ -1196,24 +1270,24 @@ button {
 .bzst-orb::before {
   content: "";
   position: absolute;
-  inset: 36px;
+  inset: 28px;
   border-radius: 50%;
   border: 1px solid rgba(220, 119, 70, 0.16);
 }
 
 .dot-grid {
   position: absolute;
-  top: 46px;
+  top: 32px;
   left: 50%;
   display: grid;
-  grid-template-columns: repeat(4, 8px);
-  gap: 10px;
+  grid-template-columns: repeat(4, 7px);
+  gap: 8px;
   transform: translateX(-50%);
 }
 
 .dot-grid span {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--accent);
   animation: pulse-dot 3.6s ease-in-out infinite;
@@ -1223,9 +1297,9 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  top: 112px;
+  top: 82px;
   font-family: var(--font-serif), serif;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: -0.05em;
 }
 
@@ -1234,7 +1308,7 @@ button {
 }
 
 .orb-caption {
-  margin-top: 18px;
+  margin-top: 14px;
   color: #5e5348;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
@@ -1242,9 +1316,9 @@ button {
 }
 
 .orb-subcaption {
-  margin-top: 10px;
+  margin-top: 8px;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.84rem;
 }
 
 .section {
@@ -1961,11 +2035,11 @@ button {
   }
 
   .hero-home-visual .hero-stage {
-    min-height: 500px;
+    min-height: 430px;
   }
 
   .workflow-visual-home {
-    padding: 34px 24px 36px;
+    padding: 24px 22px 28px;
   }
 
   .workflow-grid {
@@ -2061,7 +2135,7 @@ button {
   }
 
   .hero-home-visual .hero-stage {
-    min-height: 620px;
+    min-height: 520px;
   }
 
   .hero-smb .hero-copy h1,
@@ -2088,6 +2162,14 @@ button {
   .pillars-band,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-stack-compact.outcomes .workflow-chip {
+    justify-self: start;
+  }
+
+  .workflow-chip::after {
+    display: none;
   }
 
   .smb-hero-scene {
