@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.next-app/
+.playwright-mcp/
+
+*.log
+.DS_Store
+
+homepage-*.png
+enterprise-hero-*.png
+small-business-*.png
+smb-*.png
+
