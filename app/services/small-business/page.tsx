@@ -111,7 +111,7 @@ export default function SmallBusinessPage() {
             keep digital work moving, and make day-to-day operations easier to run.
           </p>
           <div className="button-row">
-            <Link href="mailto:hello@bzst.tech" className="button button-primary">
+            <Link href="mailto:admin@bazaarstreet.us" className="button button-primary">
               <span>Book a discovery call</span>
               <span className="arrow">↗</span>
             </Link>
@@ -259,7 +259,7 @@ export default function SmallBusinessPage() {
         title="Ready to save time and grow with AI?"
         description="Let’s find the right opportunities and build a plan tailored to your business."
         primaryLabel="Book a discovery call"
-        primaryHref="mailto:hello@bzst.tech"
+        primaryHref="mailto:admin@bazaarstreet.us"
       />
     </SiteShell>
   );

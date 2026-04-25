@@ -34,7 +34,7 @@ export function SiteShell({
               );
             })}
           </nav>
-          <a href="mailto:hello@bzst.tech" className="button button-primary">
+          <a href="mailto:admin@bazaarstreet.us" className="button button-primary">
             <span>Book a Call</span>
             <span className="arrow">↗</span>
           </a>
@@ -70,14 +70,14 @@ export function SiteShell({
             </div>
             <div className="footer-link-group">
               <strong>Get Started</strong>
-              <a href="mailto:hello@bzst.tech">Book a discovery call</a>
-              <a href="mailto:hello@bzst.tech">Email BZST</a>
+              <a href="mailto:admin@bazaarstreet.us">Book a discovery call</a>
+              <a href="mailto:admin@bazaarstreet.us">Email BZST</a>
               <Link href="/services/small-business">See example workflows</Link>
             </div>
             <div className="footer-link-group">
               <strong>Contact</strong>
-              <a href="mailto:hello@bzst.tech">hello@bzst.tech</a>
-              <a href="mailto:hello@bzst.tech">Book a call</a>
+              <a href="mailto:admin@bazaarstreet.us">admin@bazaarstreet.us</a>
+              <a href="mailto:admin@bazaarstreet.us">Book a call</a>
             </div>
           </div>
           <div className="footer-bottom">© 2026 BAZARSTREET. All rights reserved.</div>

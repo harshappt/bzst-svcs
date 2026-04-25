@@ -124,7 +124,7 @@ export default function HomePage() {
         title="Ready to put AI to work in your business?"
         description="Let’s identify the right opportunities and build a plan tailored to your goals."
         primaryLabel="Book a discovery call"
-        primaryHref="mailto:hello@bzst.tech"
+        primaryHref="mailto:admin@bazaarstreet.us"
       />
     </SiteShell>
   );

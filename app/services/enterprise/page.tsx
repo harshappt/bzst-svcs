@@ -112,7 +112,7 @@ export default function EnterprisePage() {
             existing stack, and make the result measurable.
           </p>
           <div className="button-row">
-            <Link href="mailto:hello@bzst.tech" className="button button-primary">
+            <Link href="mailto:admin@bazaarstreet.us" className="button button-primary">
               <span>Talk to an expert</span>
               <span className="arrow">↗</span>
             </Link>
@@ -244,7 +244,7 @@ export default function EnterprisePage() {
         title="Start with one workflow that is slowing execution down."
         description="We can assess the area, implement the solution, and make sure the result is measurable."
         primaryLabel="Book a discovery call"
-        primaryHref="mailto:hello@bzst.tech"
+        primaryHref="mailto:admin@bazaarstreet.us"
       />
     </SiteShell>
   );
