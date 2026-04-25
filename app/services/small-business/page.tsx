@@ -100,11 +100,11 @@ export default function SmallBusinessPage() {
         <div className="hero-copy">
           <div className="eyebrow">Small business solutions</div>
           <h1>
-            Automate routine work and
+            Automate routine
             <br />
-            <span className="accent-text">free up hours</span>
+            work and
             <br />
-            every week.
+            <span className="accent-text">free up hours.</span>
           </h1>
           <p>
             We help small businesses streamline follow-up, reduce repetitive admin,
@@ -141,7 +141,7 @@ export default function SmallBusinessPage() {
           <div className="smb-hero-core">
             <div className="smb-hero-core-badge">
               <Glyph kind="spark" />
-              <span>Small business workflows</span>
+              <span>AI-powered operations</span>
             </div>
             <div className="hero-ai-emblem">
               <div className="hero-ai-ring hero-ai-ring-1" />
@@ -157,11 +157,11 @@ export default function SmallBusinessPage() {
               <div className="hero-ai-node hero-ai-node-bottom" />
               <div className="hero-ai-node hero-ai-node-left" />
             </div>
-            <div className="smb-hero-core-title">Daily operations</div>
+            <div className="smb-hero-core-title">AI handling the routine</div>
             <div className="smb-hero-core-steps">
-              <span>Capture new requests</span>
-              <span>Route the work</span>
-              <span>Follow through</span>
+              <span>Capture and qualify</span>
+              <span>Route automatically</span>
+              <span>Keep work moving</span>
             </div>
           </div>
           <div className="smb-hero-column smb-hero-column-right">

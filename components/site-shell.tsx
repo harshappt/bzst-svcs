@@ -80,7 +80,7 @@ export function SiteShell({
               <a href="mailto:hello@bzst.tech">Book a call</a>
             </div>
           </div>
-          <div className="footer-bottom">© 2026 BZST. All rights reserved.</div>
+          <div className="footer-bottom">© 2026 BAZARSTREET. All rights reserved.</div>
         </footer>
       </div>
     </div>

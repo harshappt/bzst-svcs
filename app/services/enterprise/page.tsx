@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { EnterpriseUseCaseCarousel } from "@/components/enterprise-usecase-carousel";
 import { Glyph, type GlyphKind } from "@/components/glyph";
 import { CtaPanel, SectionHeader } from "@/components/sections";
 import { SiteShell } from "@/components/site-shell";
@@ -8,7 +9,7 @@ const helpCards: Array<{ icon: GlyphKind; title: string; body: string }> = [
   {
     icon: "search",
     title: "Workflow assessment",
-    body: "Analyze a high-friction area in operations, content, service delivery, or internal workflows and identify the right intervention.",
+    body: "Analyze a high-friction area across operations, support, internal tooling, delivery, or back-office workflows and identify the right intervention.",
   },
   {
     icon: "document",
@@ -18,7 +19,7 @@ const helpCards: Array<{ icon: GlyphKind; title: string; body: string }> = [
   {
     icon: "layers",
     title: "Workflow redesign and orchestration",
-    body: "Rework content structures, metadata, routing, and operational handoffs across the tools your teams already rely on.",
+    body: "Rework routing, handoffs, approvals, exception handling, and coordination across the tools your teams already rely on.",
   },
   {
     icon: "chart",
@@ -31,7 +32,7 @@ const outcomes: Array<{ icon: GlyphKind; title: string; body: string }> = [
   {
     icon: "admin",
     title: "Reduce manual work",
-    body: "Cut repetitive effort across planning, content, QA, routing, and reporting workflows.",
+    body: "Cut repetitive effort across intake, handoffs, approvals, QA, and reporting workflows.",
   },
   {
     icon: "shield",
@@ -41,7 +42,7 @@ const outcomes: Array<{ icon: GlyphKind; title: string; body: string }> = [
   {
     icon: "chart",
     title: "Deliver measurable business impact",
-    body: "Increase execution velocity and make marketing operations easier to measure and improve.",
+    body: "Increase execution velocity and make operational performance easier to measure and improve.",
   },
 ];
 
@@ -80,8 +81,8 @@ const useCases = [
     body: "Organize, extract, and reuse internal knowledge so teams can act faster with less manual searching.",
   },
   {
-    title: "Content and data cleanup",
-    body: "Map, normalize, and restructure content or operational data with stronger consistency and less manual effort.",
+    title: "Operational data cleanup and normalization",
+    body: "Map, normalize, and restructure operational data so teams can work with more consistency and less manual effort.",
   },
   {
     title: "QA and exception handling",
@@ -102,9 +103,9 @@ export default function EnterprisePage() {
           <h1>
             AI execution for
             <br />
-            modern operations
+            modern software
             <br />
-            <span className="accent-text">and digital teams.</span>
+            <span className="accent-text">and operations teams.</span>
           </h1>
           <p>
             We assess one high-friction workflow, implement the right solution in your
@@ -236,18 +237,11 @@ export default function EnterprisePage() {
 
       <section className="section section-enterprise-models" id="enterprise-use-cases">
         <SectionHeader title="Example enterprise use cases" />
-        <div className="help-grid">
-          {useCases.map((item) => (
-            <div key={item.title} className="help-card">
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </div>
-          ))}
-        </div>
+        <EnterpriseUseCaseCarousel items={useCases} />
       </section>
 
       <CtaPanel
-        title="Start with one workflow that is slowing marketing execution down."
+        title="Start with one workflow that is slowing execution down."
         description="We can assess the area, implement the solution, and make sure the result is measurable."
         primaryLabel="Book a discovery call"
         primaryHref="mailto:hello@bzst.tech"

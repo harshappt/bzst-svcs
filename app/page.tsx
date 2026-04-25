@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 import { Glyph, type GlyphKind } from "@/components/glyph";
+import { HomeHeroVisual } from "@/components/home-hero-visual";
 import { CtaPanel, SectionHeader } from "@/components/sections";
 import { SiteShell } from "@/components/site-shell";
-import { WorkflowVisual } from "@/components/workflow-visual";
 
 const pathCards: Array<{ icon: GlyphKind; title: string; body: string; href: string }> = [
   {
@@ -65,43 +65,7 @@ export default function HomePage() {
   return (
     <SiteShell>
       <section className="hero-home-visual">
-        <WorkflowVisual
-          variant="home"
-          animated
-          inputs={[
-            { title: "Messages", icon: "chat" },
-            { title: "Forms", icon: "admin" },
-            { title: "Documents", icon: "document" },
-            { title: "CRM", icon: "lead" },
-            { title: "Website", icon: "globe" },
-          ]}
-          outcomes={[
-            { title: "More qualified leads", icon: "lead" },
-            { title: "Faster response", icon: "followup" },
-            { title: "Better experiences", icon: "spark" },
-            { title: "Higher efficiency", icon: "chart" },
-            { title: "Stronger growth", icon: "rocket" },
-          ]}
-          centerTitle="AI"
-          centerLabel="AI workflows"
-          centerSubLabel="Plan. Automate. Improve."
-        />
-      </section>
-
-      <section className="hero-home-copy">
-        <h1>
-          Practical AI systems that remove operational drag.
-        </h1>
-        <div className="button-row hero-home-actions">
-          <Link href="mailto:hello@bzst.tech" className="button button-primary">
-            <span>Book a discovery call</span>
-            <span className="arrow">↗</span>
-          </Link>
-          <Link href="/services/small-business" className="button-link">
-            <span>See small business solutions</span>
-            <span className="arrow">→</span>
-          </Link>
-        </div>
+        <HomeHeroVisual />
       </section>
 
       <section className="section section-home-paths">
