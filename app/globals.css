@@ -2571,11 +2571,19 @@ button {
   .topbar {
     grid-template-columns: 1fr;
     justify-items: start;
+    gap: 14px;
+    padding: 16px 4px 14px;
   }
 
   .nav-links {
+    width: 100%;
     justify-content: flex-start;
     gap: 18px;
+    row-gap: 10px;
+  }
+
+  .nav-links a.active::after {
+    bottom: -8px;
   }
 
   .brand,
@@ -2598,14 +2606,29 @@ button {
 
   .home-hero-scene {
     min-height: auto;
-    padding: 18px 18px 28px;
+    padding: 0;
+  }
+
+  .home-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: 0;
+    padding: 24px 18px 22px;
+  }
+
+  .home-hero-copy {
+    max-width: none;
+  }
+
+  .home-hero-visual-wrap {
+    min-height: 0;
   }
 
   .home-hero-column,
   .home-hero-core {
     position: static;
     transform: none;
-    width: auto;
+    width: 100%;
   }
 
   .home-hero-column {
@@ -2620,6 +2643,10 @@ button {
   .home-hero-core {
     margin: 0 auto 22px;
     max-width: 320px;
+  }
+
+  .home-hero-signal {
+    min-height: 0;
   }
 
   .home-hero-engine {
@@ -2643,7 +2670,7 @@ button {
 
   .home-hero-actions {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
   }
 
@@ -2665,8 +2692,23 @@ button {
     max-width: 100%;
   }
 
+  .hero-smb .hero-copy,
+  .hero-enterprise .hero-copy {
+    min-height: 0;
+  }
+
   .hero-copy h1 {
     font-size: 2.7rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-row .button,
+  .button-row .button-link {
+    width: 100%;
   }
 
   .workflow-grid,
@@ -2695,7 +2737,7 @@ button {
   }
 
   .usecase-carousel-card {
-    flex-basis: 85%;
+    flex-basis: calc(100% - 28px);
   }
 
   .smb-hero-scene {
@@ -2803,6 +2845,10 @@ button {
 
   .path-card {
     min-height: 0;
+  }
+
+  .cta-panel {
+    padding: 28px 22px;
   }
 
   .step-line,
