@@ -50,11 +50,6 @@ export function SiteShell({
               <p className="footer-copy">
                 AI solutions and services that help businesses operate better and grow faster.
               </p>
-              <div className="socials" aria-hidden="true">
-                <span>in</span>
-                <span>𝕏</span>
-                <span>✉</span>
-              </div>
             </div>
             <div className="footer-link-group">
               <strong>Pages</strong>
