@@ -25,7 +25,7 @@ export function HomeHeroVisual() {
       <div className="home-hero-layout">
         <div className="home-hero-copy">
           <div className="home-hero-kicker">AI implementation services</div>
-          <h1>Practical AI Services that remove operational drag</h1>
+          <h1>Practical AI Solutions that remove operational drag</h1>
           <div className="home-hero-actions">
             <Link href="mailto:admin@bazaarstreet.us" className="button button-primary">
               <span>Book a discovery call</span>

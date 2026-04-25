@@ -15,8 +15,8 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BZST",
-  description: "Practical AI systems for small businesses and enterprise teams.",
+  title: "AI Solutions for Small Business and Enterprise",
+  description: "Practical AI solutions for small businesses and enterprise teams.",
 };
 
 export default function RootLayout({

@@ -15,7 +15,7 @@ const pathCards: Array<{ icon: GlyphKind; title: string; body: string; href: str
   {
     icon: "building",
     title: "Enterprise Services",
-    body: "Modernize content, CMS, and operations with scalable AI systems.",
+    body: "Modernize content, CMS, and operations with scalable AI solutions.",
     href: "/services/enterprise",
   },
 ];

@@ -48,7 +48,7 @@ export function SiteShell({
                 <span className="brand-dot" />
               </div>
               <p className="footer-copy">
-                AI systems and services that help businesses operate better and grow faster.
+                AI solutions and services that help businesses operate better and grow faster.
               </p>
               <div className="socials" aria-hidden="true">
                 <span>in</span>
